@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment, incrementByAmount } from './features/counterSlice'
+import { decrement, increment, incrementByAmount } from './components/counterSlice'
 
 function Counter() {
     const count = useSelector((state) => state.counter.value)
@@ -18,12 +18,12 @@ function Counter() {
             <button
                 aria-label="Increment value"
                 onClick={() => dispatch(increment())}>
-                Increment
+                +
             </button>
             <button
                 aria-label="Decrement value"
                 onClick={() => dispatch(decrement())}>
-                Decrement
+                -
             </button>
             <form onSubmit={(e) => byAmount(e)}>
                 <input type="number" onChange={(e) => setInput(e.target.value)} />
